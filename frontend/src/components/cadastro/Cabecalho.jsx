@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import logo from '../../assets/images/imagem.png'
+import logo from '../../assets/images/aiai.jpeg'
 import './cabecalho.scss'
 
 
@@ -9,7 +9,7 @@ export default function Cabecalho(){
             <div className="cabecalho">
                 <img src={logo} height="150px"/>
 
-                <h1>Cursos</h1>
+                <h1>Livraria Frei</h1>
 
                 <div className="links">
                     <Link to={'/'}>inicio</Link>

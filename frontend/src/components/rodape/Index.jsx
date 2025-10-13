@@ -1,5 +1,5 @@
 
-    import logo from '../../assets/images/imagem.png'
+    import logo from '../../assets/images/aiai.jpeg'
     import './index.scss'
 
 
