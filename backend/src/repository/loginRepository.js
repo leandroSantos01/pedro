@@ -2,7 +2,7 @@ import { connection } from "./connection.js"
 
 export async function Login(novo) {
     const comando = `
-        insert into login(usuario, senha)
+        insert into Login(usuario, senha)
         values
         (?,MD5(?))
     `
@@ -12,11 +12,11 @@ export async function Login(novo) {
 }
 
 
-export async function Listar(){
-    const comando =`
-    Select * from Login
+export async function Listar() {
+    const comando = `
+        SELECT * FROM Login
     `
 
-    const [info] = await connection.query(comando)
-    return info.affectedRows
+    const [linhas] = await connection.query(comando)
+    return linhas
 }

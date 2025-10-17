@@ -54,3 +54,55 @@
 
     
 }
+
+.buuton_listar{
+    width: 10%;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 20px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+
+.buuton_apagar{
+        width: 10%;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 20px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+
+}
+
+
+.container{
+    width: 100%;
+    gap: 50px ;
+    justify-content: center;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+    .caixa{
+        width: 20%;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        background-color: burlywood;
+        border-radius: 25px;
+        
+    }
+
+    h1{
+        background-image: url(image.png);
+        background-size: contain;
+        background-clip: text;
+        color: transparent;
+    }
+
+}
