@@ -10,3 +10,13 @@ export async function Login(novo) {
     const [info] = await connection.query(comando,[novo.usuario, novo.senha])
     return info.insertId
 }
+
+
+export async function Listar(){
+    const comando =`
+    Select * from Login
+    `
+
+    const [info] = await connection.query(comando)
+    return info.affectedRows
+}

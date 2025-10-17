@@ -1,7 +1,7 @@
 import { connection } from "./connection.js";
 
 export async function Livros() {
-    const comando = `select *from livros`
+    const comando = `select * from Livros`
 
     const [registro] = await connection.query(comando)
     return registro
@@ -10,7 +10,7 @@ export async function Livros() {
 
 export async function adicionarLivros(novo) {
     const comando = `
-    insert into livros(titulo, autor,capa_url) 
+    insert into Livros(titulo, autor,capa_url) 
     values
     (?,?,?)
     `
