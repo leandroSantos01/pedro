@@ -16,18 +16,16 @@ export default function Login(){
             return
         }
 
-        if(!senha || isNaN senha ){
-            alert('precisa de ususario')
+        if(!senha || isNaN (senha) ){
+            alert('precisa de senha')
             return
         }
         await api.post('/login', ({
-
-            
             "usuario":usuario,
             "senha":senha
         }))
        
-        .then(() => alert('Usuario criado'))
+        .then(() => alert('Usuario criado') )
          
        
         .catch((e) => alert(e.response.error))
