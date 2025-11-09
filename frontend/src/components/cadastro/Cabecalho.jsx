@@ -14,6 +14,8 @@ export default function Cabecalho(){
                 <div className="links">
                     <Link to={'/'}>inicio</Link>
                     <Link to={'/sobre'}>sobre</Link>
+                    <Link to={'/login'}> Login</Link>
+                    <Link to={'/loginadmin'}> Admin</Link>
                 </div>
             </div>
         </div>

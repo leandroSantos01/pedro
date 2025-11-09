@@ -1,11 +1,12 @@
 import { connection } from "./connection.js"
 
 
-export async function cadastrar(novo) {
-    const [info] = await connection.query(
-        `Insert into lOGIN (nome,email,senha)
-        values(?,?,MD%(?))`,
-        [novo.nome, novo.email, novo.senha]
+export async function Cadastrar(novo) {
+    const comando =  `Insert into LOGIN (nome,email,senha,data_criacao)
+        values(?,?,MD5(?),?)`
+
+    const [info] = await connection.query(comando,
+        [novo.nome, novo.email, novo.senha,new Date()]
     )
 
     return info.insertId
@@ -16,7 +17,7 @@ export async function cadastrar(novo) {
 
 export async function verificar(pessoa) {
     const comando = `
-selectnome,
+select nome,
        email
   from login
  where email = ?
@@ -25,6 +26,19 @@ selectnome,
 
     const [info] = await connection.query(comando, [pessoa.email, pessoa.senha])
     return info[0]
+}
+
+
+export async function BuscarAdmin(adimin) {
+    const comando = `
+    select * from login
+    where email = ?
+    and senha = ?
+    `
+
+    const [info] = await connection.query(comando, [adimin.email, adimin.senha])
+    return info[0]
+
 }
 
 export async function Listar() {

@@ -1,19 +1,18 @@
 .area_login{
-    margin: 100px 0 300px 0;
-    width: 30%;
+    margin-top: 100px;
+    width: 40%;
     padding: 50px;
-    height: 400px;
+    height: 500px;
     display: flex;
     box-shadow: 2px 1px 5px 2px black;
-
     border-radius: 25px;
     flex-direction: column;
     justify-self: center;
     align-items: center;
-    background-image: url(image.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover; 
+    justify-content: center;
 
     label{
         display: flex;
@@ -22,7 +21,7 @@
         font-weight: bolder;
         margin-bottom: 50px;
         font-size: 30px;
-        color: white;
+        color: rgb(0, 0, 0);
     }
     input{
         display: flex;

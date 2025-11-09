@@ -1,7 +1,9 @@
 import { BrowserRouter,Route,Routes } from "react-router";
 import App from './pages/home/index.jsx'
 import Sobre from "./pages/contatos/Sobre.jsx";
-import Login from "./pages/Login/Index.jsx";
+
+import Admin from "./pages/admin/index.jsx";
+import Cadastrar from "./pages/cadastrar/Index.jsx";
 
 
 export default function Navegar(){
@@ -10,7 +12,8 @@ export default function Navegar(){
         <Routes>
             <Route path="/" element = {<App/>}/>
             <Route path="/sobre" element = {<Sobre/>}/>
-            <Route path="/login" element = {<Login/>}/>
+            <Route path="/cadastrar" element = {<Cadastrar/>}/>
+            <Route path="/loginadmin" element = {<Admin/>}/>
         </Routes>
         </BrowserRouter>
     )
